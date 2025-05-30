@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #logo{
+            width: 80px;
+        }
+        section{
+            min-height: 100vh;
+            width: 100%;
+            /* border: 2px solid red; */
+        }
+        header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            background-color: silver;
+        }
+        nav{
+            padding: 10px;
+        }
+
+        #homebtn{
+            padding: 5px;
+            font-size: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        nav input:nth-of-type(1){
+            width: 250px;
+            text-align: center;
+            padding: 5px;
+            border-radius: 20px;
+            font-weight: bolder;
+        }
+
+        nav input:nth-of-type(2){
+            border-radius: 20px;
+            padding: 8px;
+            background-color: gold;
+            font-weight: bold;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #searchbtn{
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #divmain{
+            width: 100%;
+            min-height: 89vh;
+            /* border: 2px solid blue; */
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+            align-items: flex-start;
+            gap: 5px;
+        }
+        .divlist{
+            width: 100px;
+            min-height: 75vh;
+            border: 5px solid black;
+            border-radius: 20px;
+        }
+        .divmusic{
+            width: 100%;
+            min-height: 75vh;
+            border: 2px solid red;
+        }
+        footer{
+            width: 100%;
+            min-height: 80px;
+            /* border: 2px solid red; */
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: aqua;
+        }
+        .card article{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .card article button{
+            font-size: 18px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .card img{
+            width: 100%;
+            height: 80%;
+        }
+
+        @media(max-width:480px){
+            header{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                /* padding-top: 2px; */
+                background-color: black;
+                gap: 0px;
+            }
+            #logo{
+                width: 120px;
+            }
+            nav{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <img src="songslogo.png" alt="MyLogo" id="logo">
+            <nav>
+                <button id="homebtn"><i class="fa-solid fa-house-user"></i></button>
+                <input type="text" placeholder="what songs do you like?">
+                <button id="searchbtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="button" value="Explore premium">
+            </nav>
+        </header>
+        <div id="divmain">
+            <div class="divlist">
+        
+            </div>
+
+            <div class="divmusic">
+
+                <div class="card">
+                    <img src="/EndOfBegining.jpg" alt="EndOfBegining">
+                <article>
+                    <h4>End-Of-Begining: by DJO</h4>
+                    <button onclick="playMusic()"><i class="fa-solid fa-circle-play"></i></button>
+                </article>
+                </div> 
+
+                <div class="card">
+                    <img src="/cryforme.jpg" alt="cryforme">
+                <article>
+                    <h4>End-Of-Begining: by DJO</h4>
+                    <button onclick="playMusic()"><i class="fa-solid fa-circle-play"></i></button>
+                </article>
+                </div> 
+
+            </div>
+
+        </div>
+        <footer>
+            <audio id="myAudio" src="music.mp3" controls></audio>
+        </footer>
+    </section>
+
+    <script>
+        function playMusic(){
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+       
+    </script>
+</body>
+</html>

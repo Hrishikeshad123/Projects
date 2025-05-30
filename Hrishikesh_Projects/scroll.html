@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        div:nth-of-type(1){
+            width: 900px;
+            height: 600px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        div:nth-of-type(1) img{
+            width: 100%;
+            height: 100%;
+        }
+        #prev{
+            border: 2px solid black;
+            font-size: 30px;
+            border-radius: 10px;
+            background-color: red;
+        }
+
+        #next{
+            border: 2px solid black;
+            font-size: 30px;
+            border-radius: 10px;
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <button id="prev">Left</button>
+        <div>
+            <img src="/valorantImages/chamber.jpg" alt="chamber" class="images">
+            <img src="/valorantImages/gekko.jpg" alt="gekko" class="images">
+            <img src="/valorantImages/jett.jpg" alt="jett" class="images">
+        </div>
+        <button id="next">Right</button>
+    </section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        currentIndex = 0;
+        images = $(".images");
+        totalImages = images.length;
+
+        $(images[currentIndex]).fadeIn();
+
+        $("#next").click(function(){
+            $(images[currentIndex]).fadeOut("slow");
+            currentIndex = (currentIndex + 1)%totalImages;
+            $(images[currentIndex]).fadeIn("slow");
+        });
+
+        $("#prev").click(function(){
+            $(images[currentIndex]).fadeOut("slow");
+            currentIndex = (currentIndex - 1 + totalImages)%totalImages;
+            $(images[currentIndex]).fadeIn("slow");
+        })
+    })
+</script>
+</html>

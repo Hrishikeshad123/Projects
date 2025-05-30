@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .Dest-section{
+            text-align: center;
+            margin: 20px 20px;
+           
+        }
+        .cards{
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 20px;
+            width: 100%;
+            min-height: 90vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            background: linear-gradient(to right, rgb(214, 214, 218),rgb(108, 108, 153),rgb(96, 96, 164)
+            );
+            /* overflow: hidden; */
+            /* border-color: pink; */
+            
+        }
+
+        .card{
+            border: 1px solid skyblue;
+            border-radius: 20px;
+            overflow: hidden;
+            gap: 30px;
+            background-color: white;
+            padding: 20px;
+
+            /* border-color: blue; */
+        }
+
+        .card:hover{
+            border: 5px solid black;
+
+            /* border-color: rgb(13, 66, 88); */
+            transition: all 1s;
+            
+        }
+
+        section:nth-of-type(1) figure{
+            /* border: 2px solid red; */
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            object-fit: contain;
+        }
+
+        
+        section:nth-of-type(1) figure img{
+            width: 100%;
+            /* overflow: hidden; */
+            
+            border-radius: 10px;
+            
+        }
+
+        section:nth-of-type(1) article{
+            text-align: left;
+            padding: 20px;
+            
+
+        }
+
+        button{
+            width: 150px;
+            min-height: 35px;
+            background-color: white;
+            color: blue;
+            border-radius: 10px;
+            border-color: blue;
+            margin: 10px 0;
+            /* display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 0 10px; */
+            
+        }
+
+        section:nth-of-type(1) article h3{
+            color: black;
+            
+        }
+
+        section:nth-of-type(1) article p{
+            color: grey;
+            
+        }
+        section:nth-of-type(1) article h4{
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+   <main>
+    <section class="Dest-section">
+        <h1>Choose Your Destination</h1>
+        <div class="cards">
+            <div class="card">
+                <figure>
+                    <img src="/bookingImages/resort.jpeg" alt="resort">
+                </figure>
+                <article>
+                    <h3>Bella Vista Resort</h3>
+                    <p>Miami</p>
+                    <h4>$56 Night</h4>
+                </article>
+                <button type="button">View More</button>
+            </div>
+
+            <div class="card">
+                <figure>
+                    <img src="/bookingImages/palace1.jpeg" alt="palace">
+                </figure>
+                <article>
+                    <h3>Island Palace hotel</h3>
+                    <p>Ibiza</p>
+                    <h4>$180 Night</h4>
+                </article>
+                <button type="button">View More</button>
+            </div>
+
+            <div class="card">
+                <figure>
+                    <img src="/bookingImages/hotel.webp" alt="hotel">
+                </figure>
+                <article>
+                    <h3>White Sea Hotel</h3>
+                    <p>Toronto</p>
+                    <h4>$380 Night</h4>
+                </article>
+                <button type="button">View More</button>
+            </div>
+
+            <div class="card">
+                <figure>
+                    <img src="/bookingImages/hotel2.jpeg" alt="hotel">
+                </figure>
+                <article>
+                    <h3>LuxEco</h3>
+                    <p>New York</p>
+                    <h4>$324 Night</h4>
+                </article>
+                <button type="button">View More</button>
+            </div>
+
+            <div class="card">
+                <figure>
+                    <img src="/bookingImages/hotel3.jpeg" alt="hotel">
+                </figure>
+                <article>
+                    <h3>Cerenity Clove Hotel</h3>
+                    <p>New York</p>
+                    <h4>$240 Night</h4>
+                </article>
+                <button type="button">View More</button>
+            </div>
+        </div>
+    </section>
+   </main>
+</body>
+</html>

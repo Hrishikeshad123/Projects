@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header img{
+            width: 20px;
+        }
+        .nav-bar{
+           display: flex;
+           flex-direction: row;
+           justify-content: space-between;
+           align-items: center;
+           padding: 20px;
+           /* width: 100%; */
+           /* height: 50px; */
+           background-color: white;
+           /* border: 2px solid red; */
+        }
+
+        section:nth-of-type(1) a{
+            text-decoration: none;
+            text-align: center;
+            
+        }
+        /* section:nth-of-type(1) a:hover{
+             border: 1px solid black;
+             background-color: pink;
+             width:100px;
+             text-align: center;
+             padding: 2px;
+           
+             
+        } */
+
+        section:nth-of-type(1) a:hover{
+            background-color: pink;
+            width: 100px;
+            height: 20px;
+            border: 1px double black;
+        }
+
+        section:nth-of-type(1) img{
+            width: 100px;
+            /* background-color: whitesmoke; */
+        }
+        section:nth-of-type(2){
+            border: 1px double black;
+            margin: 25px;
+            min-height: 90vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 20px;
+            gap: 20px;
+            flex-wrap: wrap;
+            
+        }
+
+        section:nth-of-type(2) div{
+            border: 2px solid black;
+            /* background-color: red; */
+            width: 350px;
+            height: 300px;
+            
+        }
+
+        .div{
+            padding: 10px;
+            text-align: center;
+            text-decoration: double black;
+            color: maroon;
+            overflow: hidden;
+        }
+        
+        .img{
+            height: 250px;
+            padding: 20px;
+            
+            
+        }
+        #logo{
+            width: 50px;
+            height: 55px;
+            
+
+
+        }
+        section:nth-of-type(2) div a{
+            text-decoration: none;
+            color: maroon;
+        }
+         
+       
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+           <nav class="nav-bar">
+            <img src="/shoppingImages/basket.png" alt="logo" id="logo">
+                <a href="#"> Home</a>
+                <a href="#"> Listing</a>
+                <a href="#"> Inventory</a>
+                <a href="#">Orders</a>
+            </nav> 
+        </header>
+    </section>
+    <section>
+        <div class="div">
+           
+           <a href="https://www.flipkart.com" target="_blank">
+            <h2>Pyjamas</h2>
+            <img src="/shoppingImages/pyjama.jpeg" alt="pyjama" class="img">
+           </a>
+            
+        </div>
+        <div class="div">
+            <a href="https://www.flipkart.com" target="_blank">
+                <h2>Shorts</h2>
+                <img src="/shoppingImages/shorts.jpeg" alt="shorts" class="img">
+
+            </a>
+        </div>
+        <div class="div">
+            <a href="https://www.flipkart.com" target="_blank">
+                <h2>Dress</h2>
+                <img src="/shoppingImages/dress.jpeg" alt="dress" class="">
+
+            </a>
+        </div>
+        <div class="div">
+            <a href="https://www.flipkart.com" target="_blank">
+                <h2>SweatShirts</h2>
+                <img src="/shoppingImages/sweatshirt.jpeg" alt="SweatShirts" id="img">
+
+            </a>
+        </div>
+        <div class="div">
+            <a href="https://www.flipkart.com" target="_blank">
+                <h2>SweatShirts</h2>
+                <img src="/shoppingImages/jeans2.jpeg" alt="jeans" id="img">
+
+            </a>
+        </div>
+        <div class="div">
+            <a href="https://www.flipkart.com" target="_blank">
+                <h2>Jackets</h2>
+                <img src="/shoppingImages/jackets.jpeg" alt="jackets" id="img">
+
+            </a>
+
+        </div>
+       
+
+    </section>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+        }
+        .calculator{
+            background: #3a4452;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .calculator form input{
+            border: 0;
+            outline: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            box-shadow: -8px -8px 15px rgba(255,255,255,0.1),5px 5px 15px rgba(0,0,0,0.2);
+            background: transparent;
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        form .display{
+            display: flex;
+            justify-content: flex-end;
+            margin: 20px 0;
+        }
+
+        form .display input{
+            text-align: right;
+            flex: 1rem;
+            /* font-size: 16px; */
+            box-shadow: none;
+            padding: 10px;
+        }
+
+        form input.equal{
+            width: 145px;
+        }
+        #equation{
+            border:1px solid white;
+            color:white;
+        }
+
+        @media(max-width:480px){
+            .container{
+                width: 100%;
+                min-height: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input type="text" name="display" readonly id="equation">
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="Clearall()" >
+                    <input type="button" value="DE" onclick="Clearone()">
+                    <input type="button" value="." class="in">
+                    <input type="button" value="/" class="in">
+                </div>
+                <div>
+                    <input type="button" value="7" class="in">
+                    <input type="button" value="8" class="in">
+                    <input type="button" value="9" class="in">
+                    <input type="button" value="*" class="in">
+                </div>
+                <div>
+                    <input type="button" value="4" class="in">
+                    <input type="button" value="5" class="in">
+                    <input type="button" value="6" class="in">
+                    <input type="button" value="-" class="in">
+                </div>
+                <div>
+                    <input type="button" value="1" class="in">
+                    <input type="button" value="2" class="in">
+                    <input type="button" value="3" class="in">
+                    <input type="button" value="+" class="in">
+                </div>
+                <div>
+                    <input type="button" value="00" class="in">
+                    <input type="button" value="0" class="in">
+                    <input type="button" value="=" onclick="solve()">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        let eq = document.getElementById("equation");
+        let inputs = document.querySelectorAll(".in");
+    
+        console.log(inputs);
+
+        inputs.forEach(x =>{
+            x.addEventListener("click",()=>{
+                eq.value += x.value;
+                console.log("working")
+            })
+        })
+
+        function solve(){
+            eq.value = eval(eq.value);
+            if(eq.value == Infinity){
+                eq.value = "technologia";
+            }
+        }
+        
+        function Clearall(){
+            eq.value = "";
+        }
+
+        function Clearone(){
+            eq.value = eq.value.slice(0,-1);
+        }
+
+
+    </script>
+</body>
+</html>
