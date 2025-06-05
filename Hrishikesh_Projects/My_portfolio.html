@@ -635,37 +635,22 @@
                 </div>
             </article>
        </div>
-       <form id="productForm" >
+      <form id="productForm" method="post" action="https://formsubmit.co/2da8f2c008f9050e8ec7989c5835be6c" >
             <label>Full Name</label>
-            <input type="text" placeholder="Enter Your Full Name" required autocomplete="on" pattern="[A-Za-z | ]">
+            <input type="text" placeholder="Enter Your Full Name" name="name" required autocomplete="on" pattern="[a-zA-Z | ]">
             <label>Email</label>
-            <input type="email" placeholder="example@gmail.com" required autocomplete="on">
+            <input type="email" name="email" placeholder="example@gmail.com" required autocomplete="on">
             <label>Phone (optional)</label>
-            <input type="tel" placeholder="xxx-xxx-xxxx" pattern="[0-9{10}]">
+            <input type="tel" placeholder="xxx-xxx-xxxx" pattern="[0-9{10}]" maxlength="10">
             <label>Message</label>
-            <textarea placeholder="Type Your Message" cols="35"></textarea>
-            <input type="button" value="submit" id="submitbtn" onsubmit="sendEmail(); reset(); return false">
+            <textarea placeholder="Type Your Message" name="text" cols="35"></textarea>
+            <input type="submit" value="submit" id="submitbtn">
        </form>
 
        </div>
        <a href="#home" id="b2t">Back-To-Top</a>
     </section>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
-
-        function sendEmail(){
-            Email.send({
-            Host : "smtp.gmail.com",
-            Username : "username",
-            Password : "password",
-            To : 'hrishikesh.ad75@gmail.com',
-            From : document.getElementById("email").value,
-            Subject : "Contact Form Enquiry",
-            Body : "Name: "+document.getElementById("textarea").value
-        }).then(
-        message => alert(message)
-        )
-        }
 
         let name = document.querySelectorAll("input");
         // let submitbtn = document.getElementById("submitbtn");
